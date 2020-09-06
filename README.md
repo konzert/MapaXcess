@@ -1,4 +1,4 @@
-# gobz
+# MapXcess
 ### Run the backend
 Move to backend folder:
 ```bash
