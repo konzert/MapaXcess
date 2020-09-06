@@ -39,7 +39,7 @@ const ReviewModal = (props) => {
 	};
 
 	const addReview = async () => {
-		let json = `{"author": "Yi Heng Liu", "description": "${desc}", "rating": "${starRating}", "placeId": "${props.placeId}"}`;
+		let json = `{"author": "Haihan Chen", "description": "${desc}", "rating": "${starRating}", "placeId": "${props.placeId}"}`;
 
 		try {
 			let response = await fetch('http://192.168.0.16:4000/reviews', {

@@ -14,196 +14,281 @@ const survey = [
     {
         questionType: 'SelectionGroup',
         questionText:
-            'How busy would you rate the location when you visited?',
-        questionId: 'busy',
+            'Did the location implement proper COVID measures (mandatory masks, hand sanitizer dispenser, 6ft social distancing, etc.) ',
+        questionId: 'measures',
         options: [
             {
-                optionText: 'Very crowded',
-                value: 'very high'
-            },
-            {
-                optionText: 'Busy',
+                optionText: 'All measures were enforced',
                 value: 'high'
             },
             {
-                optionText: 'A little busy',
+                optionText: 'Not all measures were enforced',
                 value: 'low'
             },
             {
-                optionText: 'Not busy at all',
+                optionText: 'No measures were implemented',
                 value: 'very low'
             },
         ]
     },
     {
-        questionType: 'Info',
-        questionText: 'Welcome2 to the React Native Simple Survey Example app! Tap next to continue'
-    },
-    {
-        questionType: 'TextInput',
-        questionText: 'Simple Survey supports free form text input.\n\nWhat is your favorite color?',
-        questionId: 'favoriteColor',
-        placeholderText: 'Tell me your favorite color!',
-    },
-    {
-        questionType: 'NumericInput',
-        questionText: 'It also supports numeric input. Enter your favorite number here!',
-        questionId: 'favoriteNumber',
-        placeholderText: '42',
-    },
-    {
-        questionType: 'NumericInput',
-        questionText: 'New to 3.0, default values!\n\nHow many balls can you juggle at once?',
-        questionId: 'jugglingBalls',
-        defaultValue: '0'
-    },
-    {
-        questionType: 'MultipleSelectionGroup',
+        questionType: 'SelectionGroup',
         questionText:
-            'Select two or three of your favorite foods!',
-        questionId: 'favoriteFoods',
-        questionSettings: {
-            maxMultiSelect: 3,
-            minMultiSelect: 2,
-        },
+            'At the time of your visit, how crowded would you say the place was?',
+        questionId: 'busy',
         options: [
             {
-                optionText: 'Sticky rice dumplings',
-                value: 'sticky rice dumplings'
+                optionText: 'Very crowded',
+                value: 'high'
             },
             {
-                optionText: 'Pad Thai',
-                value: 'pad thai'
+                optionText: 'Good amount of people',
+                value: 'high'
             },
             {
-                optionText: 'Steak and Eggs',
-                value: 'steak and eggs'
+                optionText: 'Normal traffic',
+                value: 'low'
             },
             {
-                optionText: 'Tofu',
-                value: 'tofu'
+                optionText: 'Barely anyone',
+                value: 'very low'
             },
-            {
-                optionText: 'Ice cream!',
-                value: 'ice cream'
-            },
-            {
-                optionText: 'Injera',
-                value: 'injera'
-            },
-            {
-                optionText: 'Biryani',
-                value: 'biryani'
-            },
-            {
-                optionText: 'Tamales',
-                value: 'tamales'
-            },
-        ]
-    },
-    {
-        questionType: 'MultipleSelectionGroup',
-        questionText:
-            'Simple Survey can auto advance after a question has been answered. Select two things you do to relax:',
-        questionId: 'relax',
-        questionSettings: {
-            maxMultiSelect: 2,
-            minMultiSelect: 2,
-            autoAdvance: true,
-        },
-        options: [
-            {
-                optionText: 'Reading a good book',
-                value: 'reading'
-            },
-            {
-                optionText: 'Going on vacation',
-                value: 'vacations'
-            },
-            {
-                optionText: 'Eating meals with family',
-                value: 'meals'
-            },
-            {
-                optionText: 'Heading to the ocean',
-                value: 'ocean'
-            }
         ]
     },
     {
         questionType: 'SelectionGroup',
         questionText:
-            'Simple Survey can also simulate radio button behavior. Pick from below: ',
-        questionId: 'radio',
-        questionSettings: {
-            allowDeselect: false,
-        },
+            'How much time did you spend at the location?',
+        questionId: 'time',
         options: [
             {
-                optionText: 'I was forced to pick option 1',
-                value: 'option 1'
+                optionText: 'More than 1 hour',
+                value: 'high'
             },
             {
-                optionText: 'I have to pick option 2',
-                value: 'option 2'
+                optionText: 'Between 30-60 min',
+                value: 'low'
             },
             {
-                optionText: 'I guess option 3',
-                value: 'option 3'
-            }
+                optionText: 'Under 30 min',
+                value: 'very low'
+            },
         ]
     },
     {
         questionType: 'SelectionGroup',
         questionText:
-            'Simple Survey also supports default selections: ',
-        questionId: 'singleDefault',
-        questionSettings: {
-            defaultSelection: 0
-        },
+            'How much time did you have to wait before getting access to the services? (waiting in line before entering store, clinic waiting room time, waiting time at the cash register)',
+        questionId: 'wait',
         options: [
             {
-                optionText: 'This is the default option',
-                value: 'default'
+                optionText: 'More than 5 hours',
+                value: 'high'
             },
             {
-                optionText: 'This is the alternative option',
-                value: 'alternative'
+                optionText: '1-5 hours',
+                value: 'high'
+            },
+            {
+                optionText: 'Between 30-60 min',
+                value: 'low'
+            },
+            {
+                optionText: 'Under 30 min',
+                value: 'very low'
             },
         ]
     },
     {
-        questionType: 'MultipleSelectionGroup',
+        questionType: 'SelectionGroup',
         questionText:
-            'And of course it supports multiple defaults: ',
-        questionId: 'multipleDefaults',
-        questionSettings: {
-            defaultSelection: [0, 2],
-            maxMultiSelect: 2,
-            minMultiSelect: 2,
-        },
+            'How would you rate your overall experience',
+        questionId: 'wait',
         options: [
             {
-                optionText: 'This is the first default option',
-                value: 'first default'
+                optionText: 'Positive (would recommend)',
+                value: 'high'
             },
             {
-                optionText: 'This is the first alternate option',
-                value: 'first alternative'
+                optionText: 'Neutral',
+                value: 'low'
             },
             {
-                optionText: 'This is the second default option',
-                value: 'second default'
-            },
-            {
-                optionText: 'This is the second alternate option',
-                value: 'second alternative'
+                optionText: 'Negative (would not go back)',
+                value: 'very low'
             },
         ]
     },
+
+    // {
+    //     questionType: 'Info',
+    //     questionText: 'Welcome2 to the React Native Simple Survey Example app! Tap next to continue'
+    // },
+    // {
+    //     questionType: 'TextInput',
+    //     questionText: 'Simple Survey supports free form text input.\n\nWhat is your favorite color?',
+    //     questionId: 'favoriteColor',
+    //     placeholderText: 'Tell me your favorite color!',
+    // },
+    // {
+    //     questionType: 'NumericInput',
+    //     questionText: 'It also supports numeric input. Enter your favorite number here!',
+    //     questionId: 'favoriteNumber',
+    //     placeholderText: '42',
+    // },
+    // {
+    //     questionType: 'NumericInput',
+    //     questionText: 'New to 3.0, default values!\n\nHow many balls can you juggle at once?',
+    //     questionId: 'jugglingBalls',
+    //     defaultValue: '0'
+    // },
+    // {
+    //     questionType: 'MultipleSelectionGroup',
+    //     questionText:
+    //         'Select two or three of your favorite foods!',
+    //     questionId: 'favoriteFoods',
+    //     questionSettings: {
+    //         maxMultiSelect: 3,
+    //         minMultiSelect: 2,
+    //     },
+    //     options: [
+    //         {
+    //             optionText: 'Sticky rice dumplings',
+    //             value: 'sticky rice dumplings'
+    //         },
+    //         {
+    //             optionText: 'Pad Thai',
+    //             value: 'pad thai'
+    //         },
+    //         {
+    //             optionText: 'Steak and Eggs',
+    //             value: 'steak and eggs'
+    //         },
+    //         {
+    //             optionText: 'Tofu',
+    //             value: 'tofu'
+    //         },
+    //         {
+    //             optionText: 'Ice cream!',
+    //             value: 'ice cream'
+    //         },
+    //         {
+    //             optionText: 'Injera',
+    //             value: 'injera'
+    //         },
+    //         {
+    //             optionText: 'Biryani',
+    //             value: 'biryani'
+    //         },
+    //         {
+    //             optionText: 'Tamales',
+    //             value: 'tamales'
+    //         },
+    //     ]
+    // },
+    // {
+    //     questionType: 'MultipleSelectionGroup',
+    //     questionText:
+    //         'Simple Survey can auto advance after a question has been answered. Select two things you do to relax:',
+    //     questionId: 'relax',
+    //     questionSettings: {
+    //         maxMultiSelect: 2,
+    //         minMultiSelect: 2,
+    //         autoAdvance: true,
+    //     },
+    //     options: [
+    //         {
+    //             optionText: 'Reading a good book',
+    //             value: 'reading'
+    //         },
+    //         {
+    //             optionText: 'Going on vacation',
+    //             value: 'vacations'
+    //         },
+    //         {
+    //             optionText: 'Eating meals with family',
+    //             value: 'meals'
+    //         },
+    //         {
+    //             optionText: 'Heading to the ocean',
+    //             value: 'ocean'
+    //         }
+    //     ]
+    // },
+    // {
+    //     questionType: 'SelectionGroup',
+    //     questionText:
+    //         'Simple Survey can also simulate radio button behavior. Pick from below: ',
+    //     questionId: 'radio',
+    //     questionSettings: {
+    //         allowDeselect: false,
+    //     },
+    //     options: [
+    //         {
+    //             optionText: 'I was forced to pick option 1',
+    //             value: 'option 1'
+    //         },
+    //         {
+    //             optionText: 'I have to pick option 2',
+    //             value: 'option 2'
+    //         },
+    //         {
+    //             optionText: 'I guess option 3',
+    //             value: 'option 3'
+    //         }
+    //     ]
+    // },
+    // {
+    //     questionType: 'SelectionGroup',
+    //     questionText:
+    //         'Simple Survey also supports default selections: ',
+    //     questionId: 'singleDefault',
+    //     questionSettings: {
+    //         defaultSelection: 0
+    //     },
+    //     options: [
+    //         {
+    //             optionText: 'This is the default option',
+    //             value: 'default'
+    //         },
+    //         {
+    //             optionText: 'This is the alternative option',
+    //             value: 'alternative'
+    //         },
+    //     ]
+    // },
+    // {
+    //     questionType: 'MultipleSelectionGroup',
+    //     questionText:
+    //         'And of course it supports multiple defaults: ',
+    //     questionId: 'multipleDefaults',
+    //     questionSettings: {
+    //         defaultSelection: [0, 2],
+    //         maxMultiSelect: 2,
+    //         minMultiSelect: 2,
+    //     },
+    //     options: [
+    //         {
+    //             optionText: 'This is the first default option',
+    //             value: 'first default'
+    //         },
+    //         {
+    //             optionText: 'This is the first alternate option',
+    //             value: 'first alternative'
+    //         },
+    //         {
+    //             optionText: 'This is the second default option',
+    //             value: 'second default'
+    //         },
+    //         {
+    //             optionText: 'This is the second alternate option',
+    //             value: 'second alternative'
+    //         },
+    //     ]
+    // },
     {
         questionType: 'Info',
-        questionText: 'That is all for the demo, tap finish to see your results!'
+        questionText: 'That is all, tap finish to go back!'
     },
 ];
 
@@ -225,6 +310,7 @@ export default class Survey extends Component {
 
     constructor(props) {
         super(props);
+        this.navigation = props.navigation;
         this.state = { backgroundColor: PURPLE, answersSoFar: '' };
     }
 
@@ -261,7 +347,7 @@ export default class Survey extends Component {
         const answersAsObj = {};
         for (const elem of infoQuestionsRemoved) { answersAsObj[elem.questionId] = elem.value; }
 
-        this.props.navigation.navigate('SurveyCompleted', { surveyAnswers: answersAsObj });
+        this.props.navigation.navigate('PlaceDetail');
     }
 
     /**
