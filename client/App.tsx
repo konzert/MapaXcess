@@ -18,6 +18,7 @@ import TabExploreScreen from './screens/TabExploreScreen';
 import Tab from './components/UberEats/Tab';
 import IntermediateScreen from './screens/IntermediateScreen';
 import PlaceDetail from './screens/PlaceDetail';
+import PlaceDetailClinic from './screens/PlaceDetailClinic';
 import Survey from './components/Survey';
 import TabCollectionScreen from './screens/TabCollectionScreen';
 import Header from './components/UberEats/Header';
@@ -61,6 +62,15 @@ export default function App() {
 						<Stack.Screen
 							name="PlaceDetail"
 							component={PlaceDetail}
+							options={{
+								title: '',
+								headerLeft: () => null,
+								headerTransparent: true,
+							}}
+						/>
+						<Stack.Screen
+							name="PlaceDetailClinic"
+							component={PlaceDetailClinic}
 							options={{
 								title: '',
 								headerLeft: () => null,

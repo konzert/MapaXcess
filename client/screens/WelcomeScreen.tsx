@@ -24,7 +24,7 @@ export default function WelcomeScreen({ navigation }) {
 				}}
 			>
 				{/*<BlurView intensity={100} style={styles.blur}>*/}
-				{/* <Text></Text> */}
+				<Text></Text>
 				<SafeAreaView style={{ flex: 1 }}>
 					{/*<Text style={styles.title}>*/}
 					{/*    <Text style={{fontWeight: '200'}}>go</Text>*/}

@@ -37,8 +37,8 @@ export default function WelcomeScroll () {
                         {/*<Image source={require('../assets/images/health-icon.png')} style={styles.imageStyle} />*/}
                         <View style={styles.wrapper}>
                             <Text style={styles.title}>
-                                <Text style={{fontWeight: '200'}}>go</Text>
-                                <Text style={{fontWeight: '700'}}>bz.</Text>
+                                <Text style={{fontWeight: '200'}}>Map</Text>
+                                <Text style={{fontWeight: '700'}}>aXcess</Text>
                             </Text>
                             <Text style={styles.description}>Supporting local businesses in a safe way.</Text>
                         </View>

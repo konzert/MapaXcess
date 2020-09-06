@@ -174,7 +174,7 @@ const renderTopRight = (index: number) => {
 const renderBotRight = (index: number) => {
 	switch (index) {
 		case 0:
-			return <Text style={styles.description}>5:30PM - 10:30PM</Text>;
+			return <Text style={styles.description}>7:30PM - 8:30PM</Text>;
 		case 1:
 			return;
 		case 2:
@@ -247,35 +247,26 @@ export default ({ y, onMeasurement }: ContentProps) => {
 				return <Text style={styles.description}>Sunday - Monday</Text>;
 			case 1:
 				return (
-					<View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
-						<Chip
-							icon="calendar"
-							opacity={1}
-							style={{ margin: 5, marginBottom: 5 }}
-						>
-							Reservation
-						</Chip>
-						<Chip
-							icon="shopping"
-							opacity={1}
-							style={{ margin: 5, marginBottom: 5 }}
-						>
-							Takeout
-						</Chip>
-						<Chip
-							icon="car"
-							opacity={1}
-							style={{ margin: 5, marginBottom: 20 }}
-						>
-							Curbside pickup
-						</Chip>
-						<Chip
-							icon="truck-delivery"
-							opacity={1}
-							style={{ margin: 5, marginBottom: 20 }}
-						>
-							Delivery
-						</Chip>
+					<View style={{ flexDirection: 'row', flexWrap: 'wrap', marginTop: -100,
+						marginBottom: -100,}}>
+						<Image
+							style={{ resizeMode: 'contain', width: 110 }}
+							source={require('../../assets/images/ssti.png')}
+						/>
+						<Image
+							style={{ resizeMode: 'contain', width: 110}}
+							source={require('../../assets/images/gynecology.png')}
+						/>
+						<Image
+							style={{
+								resizeMode: 'contain',
+								width: 96,
+								position: 'absolute',
+								marginLeft: 235,
+								marginTop: -2,
+							}}
+							source={require('../../assets/images/sexhealth.png')}
+						/>
 					</View>
 				);
 			case 2:
@@ -285,7 +276,7 @@ export default ({ y, onMeasurement }: ContentProps) => {
 							flexDirection: 'row',
 							flexWrap: 'wrap',
 							marginTop: -100,
-							marginBottom: -70,
+							marginBottom: 30,
 						}}
 					>
 						<Image
@@ -305,6 +296,16 @@ export default ({ y, onMeasurement }: ContentProps) => {
 								marginTop: -2,
 							}}
 							source={require('../../assets/images/temperature.png')}
+						/>
+						<Image
+							style={{
+								resizeMode: 'contain',
+								width: 96,
+								position: 'absolute',
+								marginLeft: 7,
+								marginTop: 140,
+							}}
+							source={require('../../assets/images/soap.png')}
 						/>
 					</View>
 				);
@@ -343,14 +344,20 @@ export default ({ y, onMeasurement }: ContentProps) => {
 						color="black"
 						style={{ marginRight: 5 }}
 					/>
-					<Text style={styles.text}>Very busy</Text>
+					<Text style={styles.text}> Empty</Text>
+					<Text>
+						<Text style={{color: '#474e53'}}>                        Estimated wait time: </Text>
+						<Text style={{ color: '#09B17F', fontWeight: 'bold'}}>20 min</Text>
+					</Text>
+
 				</View>
+
 				<View style={styles.info}>
 					<Text style={styles.text}>
-						<Text style={{ color: '#09B17F', fontWeight: 'bold' }}>
-							Open now{' '}
+						<Text style={{ color: 'red', fontWeight: 'bold' }}>
+							Closed now{' '}
 						</Text>
-						<Text style={{}}>until 6:00pm</Text>
+						<Text style={{}}>until 7:30 am</Text>
 					</Text>
 					<View style={styles.ratings}>
 						<Icon
@@ -364,9 +371,9 @@ export default ({ y, onMeasurement }: ContentProps) => {
 			</Animated.View>
 			<View style={styles.divider} />
 			<View style={styles.section}>
-				<Text style={styles.title2}>Restaurant info</Text>
+				<Text style={styles.title2}>Clinic info</Text>
 				<View style={styles.info}>
-					<Text style={styles.text}>2491 Rue Notre-Dame Ouest</Text>
+					<Text style={styles.text}>1001 Boul de Maisonneuve</Text>
 					<Text style={styles.link}>More info</Text>
 				</View>
 			</View>

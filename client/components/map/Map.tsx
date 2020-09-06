@@ -64,6 +64,13 @@ export default function Map(props: any) {
 			image: require('../../assets/images/store-icon.png'),
 			alternativeimage: require('../../assets/images/store-big-icon.png')
 		},
+		{
+			name: 'Clinique',
+			latitude: 45.518049,
+			longitude: -73.559044,
+			image: require('../../assets/images/health-icon.png'),
+			alternativeimage: require('../../assets/images/health-big-icon.png')
+		},
 	])
 
 	const [ref, setRef] = useState<React.MutableRefObject<MapView | null>>(

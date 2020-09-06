@@ -54,7 +54,7 @@ export default class PlacesCarousel extends React.Component {
 					image: require('../../assets/images/fitness-anytime.jpg'),
 					likeImage: require('../../assets/images/likebutton.png'),
 					schedule: 'Closed now',
-					schedulenow: ' until 4:00pm',
+					schedulenow: ' until 4:00 pm',
 					latitude: 45.517502,
 					longitude: -73.58065,
 				},
@@ -79,10 +79,21 @@ export default class PlacesCarousel extends React.Component {
 					image: require('../../assets/images/scotia.jpg'),
 					likeImage: require('../../assets/images/likebutton.png'),
 					schedule: 'Closed now',
-					schedulenow: ' until 9:00am',
+					schedulenow: ' until 9:00 am',
 					latitude: 45.496835,
 					longitude: -73.572559,
-
+				},
+				{
+					title: "Clinique L'Actuel",
+					address: '1001 Boul de Maisonneuve',
+					riskLevel: 'Med risk',
+					riskImage: require('../../assets/images/meh.png'),
+					image: require('../../assets/images/clinic.png'),
+					likeImage: require('../../assets/images/likebutton.png'),
+					schedule: 'Closed now',
+					schedulenow: ' until 7:30 am',
+					latitude: 45.496835,
+					longitude: -73.572559,
 				},
 			],
 			indexLocation: {
@@ -107,7 +118,9 @@ export default class PlacesCarousel extends React.Component {
 				activeOpacity={1}
 				style={styles.button}
 				onPress={() => {
-					this.props.navigation.navigate('PlaceDetail');
+					{item.title === 'Clinique L\'Actuel' ?
+						this.props.navigation.navigate('PlaceDetailClinic')
+					: this.props.navigation.navigate('PlaceDetail')}
 				}}
 			>
 				<View style={styles.cardContainer}>

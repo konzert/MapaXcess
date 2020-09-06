@@ -8,7 +8,7 @@ import Review from "../components/Review";
 
 export default function TabProfileScreen() {
 	return (
-		<Review />
+		<Survey />
 	);
 }
 

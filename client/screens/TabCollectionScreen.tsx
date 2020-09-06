@@ -4,11 +4,13 @@ import { SafeAreaView, StyleSheet } from 'react-native';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import SearchView from '../components/map/SearchView';
+import Survey from "../components/Survey";
 
 export default function TabCollectionScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
-			<SearchView navigation={navigation} />
+			{/*<SearchView navigation={navigation} />*/}
+			<Survey />
 			{/*<Text style={styles.title}>My Collection</Text>*/}
 			{/*<View*/}
 			{/*	style={styles.separator}*/}
